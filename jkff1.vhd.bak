@@ -1,0 +1,35 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity z3_jkff is
+    port (
+        clk   : in std_logic;   
+        RST_n : in std_logic;   
+        J     : in std_logic;   
+        K     : in std_logic;   
+        Q     : out std_logic;  
+        Qn    : out std_logic);
+end z3_jkff;
+
+architecture arch_z3_jkff of jkff is
+    signal FF : std_logic := '0'; 
+begin
+    process (clk, RST_n)
+    begin
+        if (RST_n = '0') then
+            FF <= '0'; 
+        elsif (clk'event and clk = '1') then
+            if (J = '0' and K = '0') then
+                FF <= FF; 
+            elsif (J = '0' and K = '1') then
+                FF <= '0'; 
+            elsif (J = '1' and K = '0') then
+                FF <= '1'; 
+            elsif (J = '1' and K = '1') then
+                FF <= not FF; 
+            end if;
+        end if;
+    end process;
+    Q <= FF;      
+    Qn <= not FF; 
+end arch_z3_jkff;

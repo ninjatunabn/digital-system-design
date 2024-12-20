@@ -1,0 +1,66 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity tb_synch_struct is
+end tb_synch_struct;
+
+architecture arch_tb_synch_struct of tb_synch_struct is
+    component synch_struct
+        port(
+            clk   : in std_logic;                     
+            RST_n : in std_logic;                     
+            EN    : in std_logic;                     
+            Q     : out std_logic_vector(3 downto 0); 
+            CO    : out std_logic);
+    end component;
+
+    signal clk   : std_logic := '0';                
+    signal RST_n : std_logic := '1';                
+    signal EN    : std_logic := '0';                
+    signal Q     : std_logic_vector(3 downto 0);    
+    signal CO    : std_logic;                       
+begin
+    uut: synch_struct
+        port map(
+            clk   => clk,
+            RST_n => RST_n,
+            EN    => EN,
+            Q     => Q,
+            CO    => CO);
+
+    clk_process: process
+    begin
+        while true loop
+            clk <= '0';
+            wait for 5ns;
+            clk <= '1';
+            wait for 5ns;
+        end loop;
+    end process;
+
+    stimulus_process: process
+    begin
+        wait for 10ns;
+        RST_n <= '0';
+        wait for 10ns;
+        RST_n <= '1';
+        EN <= '0';
+        wait for 20ns;
+
+        EN <= '1';
+        wait for 200ns;
+
+        EN <= '0';
+        wait for 50ns;
+
+        RST_n <= '0';
+        wait for 10ns;
+        RST_n <= '1';
+        wait for 50ns;
+
+        EN <= '1';
+        wait for 200ns;
+        wait;
+    end process;
+end arch_tb_synch_struct;
+

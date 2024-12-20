@@ -1,0 +1,195 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/ninjatuna/NUM/Dsd
+Ehoyr
+Z0 w1731576379
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 73
+Z3 d/home/ninjatuna/NUM/Dsd/lab6
+Z4 8/home/ninjatuna/NUM/Dsd/lab6/hoyr.vhd
+Z5 F/home/ninjatuna/NUM/Dsd/lab6/hoyr.vhd
+l0
+L4 1
+V[GIdR9gHFVY^lGldg4;Ri1
+!s100 7nYHi8:l=ZYSQIm?25mJN0
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1732140918
+!i10b 1
+Z8 !s108 1732140918.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/ninjatuna/NUM/Dsd/lab6/hoyr.vhd|
+Z10 !s107 /home/ninjatuna/NUM/Dsd/lab6/hoyr.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Aarch_hoyr
+R1
+R2
+DEx4 work 4 hoyr 0 22 [GIdR9gHFVY^lGldg4;Ri1
+!i122 73
+l16
+L10 63
+VcZ8FIV0zRVHnzAL1IN4;_2
+!s100 9NPW1W;2?BG7:dV@CORo01
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eseq_rec
+Z13 w1731570626
+R1
+R2
+!i122 72
+R3
+Z14 8/home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_tanigch.vhd
+Z15 F/home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_tanigch.vhd
+l0
+L4 1
+VeL]MNPbj>Zz:ILlPQnd211
+!s100 _D0j?P8[zhf<0SPEL5OH`2
+R6
+32
+R7
+!i10b 1
+Z16 !s108 1732140917.000000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_tanigch.vhd|
+Z18 !s107 /home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_tanigch.vhd|
+!i113 1
+R11
+R12
+Aprocess_3
+R1
+R2
+DEx4 work 7 seq_rec 0 22 eL]MNPbj>Zz:ILlPQnd211
+!i122 72
+l12
+L9 47
+V:8OZ>H=bTJG_:_d_262R=0
+!s100 b_NiU>4m4OM7^VLida_9n0
+R6
+32
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Etb_bitiin_ts
+Z19 w1732140910
+R1
+R2
+!i122 75
+R3
+Z20 8/home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_testbench.vhd
+Z21 F/home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_testbench.vhd
+l0
+L4 1
+VfMozFP<]FkAhoCcaI>oIF3
+!s100 BU?]=>nFzPV1a4fb1<H:42
+R6
+32
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_testbench.vhd|
+!s107 /home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_testbench.vhd|
+!i113 1
+R11
+R12
+Aarch_bit
+R1
+R2
+DEx4 work 12 tb_bitiin_ts 0 22 fMozFP<]FkAhoCcaI>oIF3
+!i122 75
+l17
+L7 63
+Vn:_Af18oNhEbfR<^PFXeU0
+!s100 4HUi;D=QXTmbKY`XV<@iG2
+R6
+32
+R7
+!i10b 1
+R8
+R22
+Z23 !s107 /home/ninjatuna/NUM/Dsd/lab6/bitiin_tsuvaa_testbench.vhd|
+!i113 1
+R11
+R12
+Etb_hoyr
+Z24 w1732135505
+R1
+R2
+!i122 74
+R3
+Z25 8/home/ninjatuna/NUM/Dsd/lab6/hoyr_testbench.vhd
+Z26 F/home/ninjatuna/NUM/Dsd/lab6/hoyr_testbench.vhd
+l0
+L4 1
+V3a_B3o4WP^>3WD:];Ql9G1
+!s100 [zOY0>7=iZ=fELjWZXko82
+R6
+32
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/ninjatuna/NUM/Dsd/lab6/hoyr_testbench.vhd|
+Z28 !s107 /home/ninjatuna/NUM/Dsd/lab6/hoyr_testbench.vhd|
+!i113 1
+R11
+R12
+Aarch_tb
+R1
+R2
+Z29 DEx4 work 7 tb_hoyr 0 22 3a_B3o4WP^>3WD:];Ql9G1
+!i122 74
+l28
+L7 69
+V57RIS2L6a=RlT:;M9Umkz1
+!s100 g?YC4ZebA9k^A?V[DM_TF3
+R6
+32
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Asim
+R1
+R2
+R29
+!i122 31
+l30
+L7 72
+V21<PnReSJ;>M`PTW4l7`O1
+!s100 n[[U^PiL=2TgjV@S;ckRY1
+R6
+32
+!s110 1732134023
+!i10b 1
+!s108 1732134023.000000
+R27
+R28
+!i113 1
+R11
+R12
+w1732134019

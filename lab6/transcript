@@ -1,0 +1,57 @@
+# Loading project tulviin mashin
+# reading /home/ninjatuna/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini
+project open /home/ninjatuna/NUM/Dsd/lab_5
+# Loading project lab_5
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Error opening /home/ninjatuna/NUM/Dsd/jkff.vhd
+# Path name '/home/ninjatuna/NUM/Dsd/jkff.vhd' doesn't exist.
+# Compile of jkff.vhd was successful.
+# Compile of jk_testbench.vhd was successful.
+# Compile of asynch.vhd was successful.
+# Compile of synch.vhd was successful.
+# Compile of synch_testbench.vhd was successful.
+# Compile of synch_structural.vhd failed with 12 errors.
+# Compile of jkff1.vhd was successful.
+# Compile of 8bitBCD.vhd was successful.
+# Compile of johnson_counter.vhd was successful.
+# Compile of johnson_testbench.vhd was successful.
+# Compile of bcd_testbench.vhd was successful.
+# Compile of asynch_tb.vhd was successful with warnings.
+# 12 compiles, 1 failed with 12 errors.
+vsim work.as_cnt work.jkff work.tb_asynch
+# vsim work.as_cnt work.jkff work.tb_asynch 
+# Start time: 13:42:24 on Nov 21,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.as_cnt(rtl)
+# Loading work.jkff(rtl)
+# Loading work.tb_asynch(arch_asynch)
+add wave -position insertpoint  \
+sim:/tb_asynch/RST_n \
+sim:/tb_asynch/a_clk \
+sim:/tb_asynch/CNTR
+run -all
+# End time: 13:50:42 on Nov 21,2024, Elapsed time: 0:08:18
+# Errors: 0, Warnings: 5

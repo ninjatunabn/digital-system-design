@@ -1,0 +1,71 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity tb_bitiin_ts is
+end tb_bitiin_ts;
+
+architecture arch_bit of tb_bitiin_ts is
+ component seq_rec is
+  port (clk, reset, X : in std_logic;
+	Z	      : out std_logic); end component;
+
+ signal clk	:std_logic := '0';
+ signal reset	:std_logic := '0';
+ signal X	:std_logic := '0';
+ signal Z	:std_logic;
+
+begin
+ uut: seq_rec
+  port map ( clk => clk, reset => reset, X => X, Z => Z);
+ clk_process:
+  process
+   begin
+	clk <= '0';
+	wait for 5ns;
+	clk <= '1';
+	wait for 10ns;
+  end process;
+
+ st_process: process
+ begin
+	reset <= '1';
+	wait for 10ns;
+	reset <= '0';
+	wait for 10ns;
+
+	X <= '0';
+	wait for 5ns;
+	X <= '1';
+	wait for 5ns;
+	X <= '1';
+	wait for 5ns;
+	X <= '0';
+	wait for 5ns;
+	X <= '1';
+	wait for 5ns;
+
+	X <= '0';
+	wait for 5ns;
+	X <= '1';
+	wait for 5ns;
+	X <= '0';
+	wait for 5ns;
+	X <= '0';
+	wait for 5ns;
+	X <= '1';
+	wait for 5ns;
+
+	X <= '0';
+	wait for 5ns;
+	X <= '1';
+	wait for 5ns;
+	X <= '0';
+	wait for 5ns;
+	X <= '1';
+	wait for 5ns;
+	X <= '0';
+	wait for 5ns;
+  end process;
+end arch_bit;
+
+

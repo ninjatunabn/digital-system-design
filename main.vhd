@@ -1,0 +1,83 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity spi_dac_interface is
+    Port (
+        clk       : in  std_logic;             -- System clock
+        reset     : in  std_logic;             -- Reset signal
+        start     : in  std_logic;             -- Start signal
+        data_in   : in  std_logic_vector(11 downto 0); -- 12-bit input data
+        channel   : in  std_logic_vector(1 downto 0);  -- Channel selection
+        spi_clk   : out std_logic;             -- SPI clock
+        spi_mosi  : out std_logic;             -- SPI Master Out Slave In
+        spi_cs    : out std_logic;             -- SPI Chip Select
+        ready     : out std_logic);              -- Ready signal);
+end spi_dac_interface;
+
+architecture Behavioral of spi_dac_interface is
+    signal clk_div     : unsigned(7 downto 0) := (others => '0');
+    signal spi_clk_int : std_logic := '0';
+    type state_type is (IDLE, LOAD, SHIFT, DONE);
+    signal state       : state_type := IDLE;
+    signal shift_reg   : std_logic_vector(15 downto 0) := (others => '0');
+    signal bit_counter : integer range 0 to 15 := 0;
+begin
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            clk_div <= (others => '0');
+            spi_clk_int <= '0';
+        elsif rising_edge(clk) then
+            clk_div <= clk_div + 1;
+            if clk_div = 0 then
+                spi_clk_int <= not spi_clk_int; -- Toggle SPI clock
+            end if;
+        end if;
+    end process;
+
+    spi_clk <= spi_clk_int; 
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            state <= IDLE;
+            spi_cs <= '1'; -- Deactivate chip select
+            spi_mosi <= '0';
+            ready <= '1';
+            shift_reg <= (others => '0');
+            bit_counter <= 0;
+        elsif rising_edge(clk) then
+            case state is
+                when IDLE =>
+                    spi_cs <= '1'; -- Deactivate chip select
+                    ready <= '1';
+                    if start = '1' then
+                        state <= LOAD;
+                    end if;
+
+                when LOAD =>
+                    ready <= '0';
+                    spi_cs <= '0'; -- Activate chip select
+                    shift_reg <= "1000" & channel & data_in; -- Load control bits and data
+                    bit_counter <= 15;
+                    state <= SHIFT;
+
+                when SHIFT =>
+                    spi_mosi <= shift_reg(15); -- Transmit MSB
+                    shift_reg <= shift_reg(14 downto 0) & '0'; -- Shift left
+                    bit_counter <= bit_counter - 1;
+                    if bit_counter = 0 then
+                        state <= DONE;
+                    end if;
+
+                when DONE =>
+                    spi_cs <= '1'; -- Deactivate chip select
+                    ready <= '1';
+                    state <= IDLE;
+
+                when others =>
+                    state <= IDLE;
+            end case;
+        end if;
+    end process;
+end Behavioral;

@@ -1,0 +1,72 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity hoyr is
+ port(clk, reset, ready, read_write, burst: in std_logic;
+	bus_id: in std_logic_vector(7 downto 0);	
+	Z: out std_logic);
+end hoyr;
+
+architecture arch_hoyr of hoyr is
+ type state_type is (idle, decision, write, read1, read2, read3, read4);
+ signal present_state, next_state: state_type;
+ signal oe, we: std_logic;
+ signal addr: std_logic_vector(1 downto 0);
+
+begin
+ pro1: process(clk, reset)
+    begin
+        if reset = '1' then
+            present_state <= idle;
+        elsif rising_edge(clk) then
+            present_state <= next_state;
+        end if;
+    end process;
+ process(present_state, bus_id, read_write, ready, burst)
+    begin
+     case present_state is
+	when idle => oe <= '0'; we <= '0'; addr <= "00";
+	 if(bus_id) = "11110011" then next_state <= decision;
+	 else next_state <= idle;
+	 end if;
+	when decision => oe <= '0'; we <= '0'; addr <= "00";
+	 if read_write = '1' then next_state <= read1;
+	 else next_state <= write;
+	 end if;
+	when write => oe <= '0'; we <= '1'; addr <= "00";
+	 if ready = '1' then next_state <= idle;
+	 else next_state <= write;
+	 end if;
+	when read1 => oe <= '1'; we <= '0'; addr <= "00";
+	 if ready = '1' and burst = '1' then next_state <= read2;
+	 else next_state <= idle;
+	 end if;
+	when read2 => oe <= '1'; we <= '0'; addr <= "01";
+	 if ready = '1' then next_state <= read3;
+	 else next_state <= read2;
+	 end if;
+	when read3 => oe <= '1'; we <= '0'; addr <= "10";
+	 if ready = '1' then next_state <= read4;
+	 else next_state <= read3;
+	 end if;
+	when read4 => oe <= '1'; we <= '0'; addr <= "11";
+	 if ready = '1' then next_state <= idle;
+	 else next_state <= read4;
+	 end if;
+	when others =>
+	 next_state <= idle;
+   end case;
+ end process;
+
+ output_func: process (present_state)
+  begin
+   case present_state is
+	when idle | decision | write | read1 | read2 | read3 => Z <= '0';
+	when read4 => 
+	 if ready = '1' then Z <= '1';
+	 else Z <= '0';
+	 end if;
+	when others => Z <= '0';
+    end case;
+   end process;
+end arch_hoyr;

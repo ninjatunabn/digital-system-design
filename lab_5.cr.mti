@@ -1,0 +1,97 @@
+/home/ninjatuna/NUM/Dsd/synch.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/synch.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity S_CNT
+-- Compiling architecture RTL of S_CNT
+
+} {} {}} /home/ninjatuna/NUM/Dsd/jkff.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/jkff.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity JKFF
+-- Compiling architecture RTL of JKFF
+
+} {} {}} /home/ninjatuna/NUM/Dsd/synch_structural.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/synch_structural.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity synch_struct
+-- Compiling architecture structural of synch_struct
+
+} {} {}} /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd {2 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_synch_struct
+-- Compiling architecture arch_tb_synch_struct of tb_synch_struct
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(45): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(57): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/synch_struct_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} /home/ninjatuna/NUM/Dsd/asynch.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/asynch.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity AS_CNT
+-- Compiling architecture RTL of AS_CNT
+
+} {} {}} /home/ninjatuna/NUM/Dsd/jkff1.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/jkff1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity z3_jkff
+-- Compiling architecture arch_z3_jkff of z3_jkff
+
+} {} {}} /home/ninjatuna/NUM/Dsd/asynch_tb.vhd {2 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/asynch_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_asynch
+-- Compiling architecture arch_asynch of tb_asynch
+** Warning: /home/ninjatuna/NUM/Dsd/asynch_tb.vhd(28): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: /home/ninjatuna/NUM/Dsd/asynch_tb.vhd(30): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} /home/ninjatuna/NUM/Dsd/synch_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/synch_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity synch_tb
+-- Compiling architecture arch_synch of synch_tb
+
+} {} {}} /home/ninjatuna/NUM/Dsd/jk_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/jk_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity AS_CNT_tb
+-- Compiling architecture behavior of AS_CNT_tb
+
+} {} {}} /home/ninjatuna/NUM/Dsd/bcd_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/ninjatuna/NUM/Dsd/bcd_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity BCD_UpDown_Counter_TB
+-- Compiling architecture Behavioral of BCD_UpDown_Counter_TB
+
+} {} {}}
